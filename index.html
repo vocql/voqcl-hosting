@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VOQCL SMP — spin up a real Minecraft server</title>
+<meta name="description" content="Generate a real, joinable Minecraft server address in minutes. Free, self-hosted, no port forwarding.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand"><span class="mark"></span><span>VOQCL SMP</span></div>
+    <nav class="links">
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn sm" href="dashboard.html">Log in</a>
+      <a class="btn sm solid" href="dashboard.html">Create a server</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <span class="status-chip"><span class="dot"></span>Free · self-hosted · real server</span>
+      <h1>Your own Minecraft server, with a real address.</h1>
+      <p class="lede">Pick a version and server type, run one command on any machine you control, and get a live, joinable server — something like <code>yourname.joinmc.link</code> — no port forwarding, no router setup.</p>
+      <div class="btn-row">
+        <a class="btn solid" href="dashboard.html">Create your server</a>
+        <a class="btn" href="#how">See how it works</a>
+      </div>
+    </div>
+    <div>
+      <div class="craft-grid">
+        <div class="craft-cell">📦</div><div class="craft-cell fill">⛏️</div><div class="craft-cell">📦</div>
+        <div class="craft-cell fill">🪵</div><div class="craft-cell fill2">💎</div><div class="craft-cell fill">🪵</div>
+        <div class="craft-cell">📦</div><div class="craft-cell fill">⛏️</div><div class="craft-cell">📦</div>
+      </div>
+      <div class="craft-arrow">↓</div>
+      <div class="craft-result">
+        <div class="badge"></div>
+        <div>
+          <strong>voqcl.joinmc.link</strong>
+          <span>Paper 1.21.1 · 2 GB RAM · online</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">How it actually works</span>
+      <h2>No magic, just a script that does the boring parts</h2>
+      <p>A quick note first, because it matters: nothing lives on GitHub itself. Your dashboard generates a command that runs on a computer you control — your own PC or a cheap VPS. That's what actually runs the server. We just make setting it up take two minutes instead of an afternoon.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="n"></span><h3>Configure</h3><p>Pick your Minecraft version, server type (Vanilla, Paper, or Forge), and how much RAM to give it.</p></div>
+      <div class="step"><span class="n"></span><h3>Run one command</h3><p>Copy the generated command into a terminal on your PC, a Raspberry Pi, or a $4/mo VPS. It installs Docker and the server for you.</p></div>
+      <div class="step"><span class="n"></span><h3>Claim your tunnel</h3><p>The script prints a one-time link from playit.gg — click it once to get a free public address, no router config needed.</p></div>
+      <div class="step"><span class="n"></span><h3>Save &amp; share</h3><p>Paste the address into your dashboard. It's saved to your account, so you (and your friends) always know where to connect.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">What you get</span>
+      <h2>Everything except the part that costs money</h2>
+      <p>Hosting compute isn't free anywhere — but the setup, the address, and keeping track of it all should be.</p>
+    </div>
+    <div class="grid3">
+      <div class="card"><span class="ic">🧭</span><h3>A real address</h3><p>Powered by playit.gg tunnels — a proper hostname your friends can type into their Multiplayer screen, not a raw IP that changes every reboot.</p></div>
+      <div class="card"><span class="ic">🧱</span><h3>Vanilla, Paper, or Forge</h3><p>The generator writes the right Docker configuration for plugins or mods, so you're not hand-editing server.properties.</p></div>
+      <div class="card"><span class="ic">💾</span><h3>Saved to your account</h3><p>Every server you create is tied to your login, so the setup command, address, and settings are there next time you need them.</p></div>
+      <div class="card"><span class="ic">🛠️</span><h3>Runs anywhere</h3><p>Your PC while you play, a spare laptop, or a low-cost VPS if you want it up 24/7 — the same script works on all of them.</p></div>
+      <div class="card"><span class="ic">🔓</span><h3>No lock-in</h3><p>It's a plain Docker container. Stop using the dashboard any time and the server keeps running exactly as it was.</p></div>
+      <div class="card"><span class="ic">📋</span><h3>One-click restart command</h3><p>Every saved server includes the exact command to bring it back up after a reboot.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Before you start</span>
+      <h2>The honest FAQ</h2>
+    </div>
+    <div class="callout">
+      <h4>Does this host the server for me?</h4>
+      <p>No — and anyone who tells you a website can spin up a live game server for free with no machine behind it isn't being straight with you. You (or a $4/mo VPS) provide the machine; we generate the exact setup so it takes minutes, not hours.</p>
+    </div>
+    <div style="height:14px"></div>
+    <div class="callout">
+      <h4>Does my computer need to stay on?</h4>
+      <p>Only while you want the server reachable. Close it, and it goes offline until you run <code>docker start mc-server</code> again — the dashboard saves that exact command for you.</p>
+    </div>
+    <div style="height:14px"></div>
+    <div class="callout">
+      <h4>Is playit.gg safe to use?</h4>
+      <p>It's a widely used, free tunneling service built specifically for game servers. Traffic to your address is routed through their network — the same trade-off as any free tunnel, in exchange for not touching your router.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="brand" style="margin-bottom:10px;"><span class="mark"></span><span>VOQCL SMP</span></div>
+    <p class="small">A setup tool for self-hosted Minecraft servers, built by VOQCL. Not affiliated with Mojang, Microsoft, or playit.gg.</p>
+  </div>
+</footer>
+
+</body>
+</html>
