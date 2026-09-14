@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — VOQCL SMP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand"><span class="mark"></span><span>VOQCL SMP</span></div>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="index.html#faq">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <button class="btn sm" id="logoutBtn" style="display:none;">Log out</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap" style="padding:50px 26px 100px;">
+
+  <!-- ===================== AUTH VIEW ===================== -->
+  <section id="authView" style="padding:20px 0; max-width:440px; margin:0 auto;">
+    <div class="section-head" style="text-align:center; margin:0 auto 26px;">
+      <h2 id="authTitle">Log in</h2>
+      <p>Your servers are saved to your account and created directly from here.</p>
+    </div>
+    <div class="panel">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="you@example.com">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="At least 6 characters">
+      <div class="btn-row" style="margin-top:20px;">
+        <button class="btn solid" id="loginBtn" style="flex:1;">Log in</button>
+        <button class="btn" id="signupBtn" style="flex:1;">Sign up</button>
+      </div>
+      <div class="msg" id="authMsg"></div>
+    </div>
+  </section>
+
+  <!-- ===================== DASHBOARD VIEW ===================== -->
+  <section id="dashView" style="display:none; padding:20px 0;">
+    <div class="section-head">
+      <span class="eyebrow">Create</span>
+      <h2>Start a server</h2>
+      <p>Fill this in and hit Create — the server is provisioned automatically, no terminal needed.</p>
+    </div>
+
+    <div class="panel">
+      <div class="form-row">
+        <div>
+          <label for="srvName">Server name</label>
+          <input type="text" id="srvName" placeholder="my-smp" maxlength="24">
+          <div class="field-hint">Letters, numbers, and dashes only.</div>
+        </div>
+        <div>
+          <label for="srvType">Server type</label>
+          <select id="srvType">
+            <option value="VANILLA">Vanilla</option>
+            <option value="PAPER" selected>Paper (plugins)</option>
+            <option value="FORGE">Forge (mods)</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div>
+          <label for="srvVersion">Minecraft version</label>
+          <select id="srvVersion">
+            <option value="LATEST" selected>Latest release (26.2)</option>
+            <option value="SNAPSHOT">Latest snapshot</option>
+            <option value="CUSTOM">Specific version…</option>
+          </select>
+          <input type="text" id="srvVersionCustom" placeholder="e.g. 1.20.4" style="display:none; margin-top:8px;">
+        </div>
+        <div>
+          <label for="srvRam">RAM (MB)</label>
+          <select id="srvRam">
+            <option value="1024">1024 — small survival, 2–4 players</option>
+            <option value="2048" selected>2048 — recommended, up to ~10 players</option>
+            <option value="4096">4096 — modded or larger groups</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:20px;">
+        <button class="btn solid" id="createBtn">Create server</button>
+      </div>
+
+      <div class="msg" id="createMsg"></div>
+    </div>
+
+    <div class="section-head" style="margin-top:50px;">
+      <span class="eyebrow">Saved</span>
+      <h2>Your servers</h2>
+    </div>
+    <div id="serverList"></div>
+    <p id="emptyState" class="field-hint" style="display:none;">No servers yet — create one above.</p>
+
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="small">VOQCL SMP · servers are created by a backend you control, tied to your Supabase account.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/supabase-client.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

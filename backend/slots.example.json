@@ -1,0 +1,5 @@
+[
+  { "port": 25565, "address": "your-slot-1.joinmc.link", "inUse": false },
+  { "port": 25566, "address": "your-slot-2.joinmc.link", "inUse": false },
+  { "port": 25567, "address": "your-slot-3.joinmc.link", "inUse": false }
+]
